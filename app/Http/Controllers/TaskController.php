@@ -78,7 +78,6 @@ class TaskController extends Controller
         $task->priority = $request->input('priority');
         $task->days = now()->diffInDays($request->input('duedate'));
 
-       
         $task->save();
 
         return redirect('index')->with('success', 'Task updated successfully');
@@ -102,7 +101,6 @@ class TaskController extends Controller
         $tasks = Task::where('priority', 'medium')->get();
         return view('medium', compact('tasks'));
     }
-
 
 }
 

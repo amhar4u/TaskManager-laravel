@@ -34,6 +34,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('high', [TaskController::class, 'getHighPriorityTasks'])->name('high.tasks');
     Route::get('low', [TaskController::class, 'getLowPriorityTasks'])->name('low.tasks');
     Route::get('medium', [TaskController::class, 'getMediumPriorityTasks'])->name('medium.tasks');
-
-
+    
 });

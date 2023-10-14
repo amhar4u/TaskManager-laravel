@@ -57,7 +57,7 @@
             </thead>
             <tbody>
             @foreach ($tasks as $task)
-            <tr class="{{ $task->days < 1 ? 'table-danger' : '' }}">
+            <tr class="{{ $task->days < 1 &&  $task->status == 'incomplete' ? 'table-danger' : '' }}">
                 <td>{{ $task->id }}</td>
                 <td>{{ $task->title }}</td>
                 <td>{{ $task->duedate }}</td>
